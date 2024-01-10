@@ -194,6 +194,7 @@ esac
 
  ./internsctl.sh user list --sudo-only ##user with sudo permission
 ```
-![Uploading x7.png…]()
+![x7](https://github.com/Rehant123/internsctl/assets/74208153/42ac307b-9f98-413d-9e8a-5243e66055da)
+
 ![Screenshot 2024-01-10 174534](https://github.com/Rehant123/internsctl/assets/74208153/c2d94324-542f-4685-8896-3460e60867be)
 ![Screenshot 2024-01-10 174706](https://github.com/Rehant123/internsctl/assets/74208153/b9272adc-93ea-4c9b-a8f6-9f792f74b7d7)
