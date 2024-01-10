@@ -76,6 +76,7 @@ function get_memory_info() {
 
 
 answer:
+```
 function create_user() {
     if [ -z "$2" ]; then
         echo "Error: Missing username. Usage: internsctl user create <username>"
@@ -115,7 +116,7 @@ case "$1" in
         ;;
 esac
 
-
+```
 **execution**
 new user-> ./internsctl.sh user create <username>
 user list-> ./internsctl.sh user list
