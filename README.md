@@ -16,28 +16,54 @@ I want to see version of my command by executing internsctl --version
 
 Answer:
 
- **1. creating a  (manual) md file**
+ **1. creating a  (manual) md file and help**
 
+```
+#!/bin/bash
 
-
-im also executing **sudo cp internsctl /usr/local/bin/** so i can directly type **internsctl** instead of ./internsctl**
-sudo cp internsctl /usr/local/bin/
-
-**2.(help command)**: 
-
-
+function display_help() {
+    echo "Usage: internsctl [OPTIONS] <COMMAND>"
+    echo "Custom Linux Command for Operations"
+    echo ""
+    echo "Options:"
+    echo "  ‐‐help           Display this help message"
+    echo "  ‐‐version        Display the command version"
+    echo ""
+    echo "Commands:"
+    echo "  cpu getinfo      Display CPU information"
+    echo "  memory getinfo   Display memory information"
+    echo "  user create <username>   Create a new user"
+    echo "  user list [‐‐sudo‐only]  List users (optionally, only
+those with sudo permissions)"
+    echo ""
+    echo "Examples:"
+    echo "  Display CPU information:"
+    echo "    internsctl cpu getinfo"
+    echo ""
+    echo "  Display memory information:"
+    echo "    internsctl memory getinfo"
+    echo ""
+    echo "  Create a new user:"
+    echo "    internsctl user create rehant_thapa"
+    echo ""
+    echo "  List all users:"
+    echo "    internsctl user list"
+```
 **Execution**: 
-internsctl --help
-
--- **3. (version command)**
-
+```
+man ./internsctl.sh
+./internsctl.sh --help
+```
+-- **(version command)**
+```
 function display_version() {
   echo "internsctl v0.1.0"
 }
-
+```
 **Execution**: 
+```
  ./internsctl.sh --version
-
+```
 
 ## section B
 
@@ -46,27 +72,29 @@ function display_version() {
 
 
 **1. Cpu information**
-
+```
 function get_cpu_info() {
   lscpu
 }
-
+```
 **Execution**: 
+```
  ./internsctl.sh cpu getinfo
-
+```
 
 **2. Memory information**
 
 create a function getmemory info
-
+```
 function get_memory_info() {
   free
 }
 
-
+```
 **Execution**: 
+```
  ./internsctl.sh memory getinfo
-
+```
 
  ### Part 2 Level Intermediate
 
