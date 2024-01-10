@@ -22,14 +22,18 @@ nano internsctl.1.md
 pandoc -s internsctl.1.md -t man -o internsctl.1
 sudo mv internsctl.1 /usr/share/man/man1/
 
-**im also doing sudo cp internsctl /usr/local/bin/ so i can directly type internsctl instead of ./internsctl**
+im also execeuting **sudo cp internsctl /usr/local/bin/** so i can directly type **internsctl** instead of ./internsctl**
 sudo cp internsctl /usr/local/bin/
 
-**executing --help command**
+**2 (help command)**: 
+
 internsctl --help
 
-**executing --update command**
+**3 (version command)**
+
 internsctl --version
 
+
+#section B
 
 
