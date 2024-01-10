@@ -146,7 +146,7 @@ esac
 
 ```
 **execution**
-new user-> ./internsctl.sh user create <username>
-user list-> ./internsctl.sh user list
-user with permission-> ./internsctl.sh user list --sudo-only
+./internsctl.sh user create <username> ##new user
+./internsctl.sh user list ##user list
+ ./internsctl.sh user list --sudo-only ##user with sudo permission
 
