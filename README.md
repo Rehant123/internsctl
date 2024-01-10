@@ -18,9 +18,7 @@ Answer:
 
  **1. creating a  (manual) md file**
 
-nano internsctl.1.md
-pandoc -s internsctl.1.md -t man -o internsctl.1
-sudo mv internsctl.1 /usr/share/man/man1/
+
 
 im also executing **sudo cp internsctl /usr/local/bin/** so i can directly type **internsctl** instead of ./internsctl**
 sudo cp internsctl /usr/local/bin/
@@ -33,43 +31,93 @@ internsctl --help
 
 -- **3. (version command)**
 
+function display_version() {
+  echo "internsctl v0.1.0"
+}
 
 **Execution**: 
-internsctl --version
+ ./internsctl.sh --version
 
 
 ## section B
 
-I want to execute the following command for -
-Part1 | Level Easy
+### Part1 | Level Easy -
+
 
 
 **1. Cpu information**
 
-if [ "$1" == "cpu" ] && [ "$2" == "getinfo" ]; then
-    # CPU Information
-    lscpu
-    exit 0
-Fi
+function get_cpu_info() {
+  lscpu
+}
 
 **Execution**: 
-internsctl cpu getinfo
+ ./internsctl.sh cpu getinfo
 
 
 **2. Memory information**
 
-if [ "$1" == "memory" ] && [ "$2" == "getinfo" ]; then
-    # Memory Information
-    free -h
-    exit 0
-Fi
+create a function getmemory info
+
+function get_memory_info() {
+  free
+}
 
 
 **Execution**: 
-Internsctl memory getinfo
+ ./internsctl.sh memory getinfo
 
 
+ ### Part 2 Level Intermediate
+
+**1.I want to create a new user on my server through the following command:**
+**2I want to list all the regular users present on my server through the following command:**
+**3 If want to list all the users with sudo permissions on my server through the following command:**
 
 
+answer:
+function create_user() {
+    if [ -z "$2" ]; then
+        echo "Error: Missing username. Usage: internsctl user create <username>"
+        exit 1
+    fi
 
+    sudo useradd -m "$2"
+    echo "User '$2' created successfully."
+}
+
+function list_users() {
+    cut -d: -f1 /etc/passwd
+}
+
+function list_sudo_users() {
+    getent group sudo | cut -d: -f4 | tr ',' '\n'
+}
+
+case "$1" in
+    user)
+        if [ "$2" == "create" ]; then
+            create_user "$@"
+        elif [ "$2" == "list" ]; then
+            if [ "$3" == "--sudo-only" ]; then
+                list_sudo_users
+            else
+                list_users
+            fi
+        else
+            echo "Invalid subcommand for 'user'. "
+            exit 1
+        fi
+        ;;
+    *)
+        echo "Invalid option. Use 'internsctl --help' for usage guidelines."
+        exit 1
+        ;;
+esac
+
+
+**execution**
+new user-> ./internsctl.sh user create <username>
+user list-> ./internsctl.sh user list
+user with permission-> ./internsctl.sh user list --sudo-only
 
