@@ -1,3 +1,10 @@
+Website (source code)
+
+https://github.com/Rehant123/projecetintern
+
+screenshot
+![Screenshot 2024-01-10 172756](https://github.com/Rehant123/internsctl/assets/74208153/5722f5f7-2dcf-4019-9717-3872f82fc2c5)
+
 # Round 1
 Scenario There is a customer who came to you with a problem to have a custom linux command for his operations. Our task is to understand the problem and create a linux command via bash script as per the instructions.
 
