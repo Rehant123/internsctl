@@ -48,7 +48,23 @@ those with sudo permissions)"
     echo ""
     echo "  List all users:"
     echo "    internsctl user list"
+}
+
+
 ```
+internsctl.md
+```
+# internsctl Manual
+
+`internsctl` is a custom Linux command designed for various system operations.
+
+## Usage
+
+```bash
+internsctl [OPTIONS]
+
+```
+
 **Execution**: 
 ```
 man ./internsctl.sh
