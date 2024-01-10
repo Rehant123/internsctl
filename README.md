@@ -1,4 +1,4 @@
-![x4](https://github.com/Rehant123/internsctl/assets/74208153/7d4f3bf0-4407-4ecb-bbc3-311194661a22)Website (source code)
+Website (source code)
 
 https://github.com/Rehant123/projecetintern
 
