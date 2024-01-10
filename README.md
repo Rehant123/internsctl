@@ -1,4 +1,4 @@
-Website (source code)
+![x4](https://github.com/Rehant123/internsctl/assets/74208153/7d4f3bf0-4407-4ecb-bbc3-311194661a22)Website (source code)
 
 https://github.com/Rehant123/projecetintern
 
@@ -80,6 +80,9 @@ man ./internsctl.sh
 ```
 
 output
+![x1](https://github.com/Rehant123/internsctl/assets/74208153/1fdb5bfa-a94c-4c67-80b8-76cb98fd81fc)
+
+![x2](https://github.com/Rehant123/internsctl/assets/74208153/fa9874ec-7246-445e-80c6-34ddfc778a4f)
 
 -- **(version command)**
 ```
@@ -99,6 +102,7 @@ function display_version() {
 
 
 
+
 **1. Cpu information**
 ```
 function get_cpu_info() {
@@ -109,7 +113,9 @@ function get_cpu_info() {
 ```
  ./internsctl.sh cpu getinfo
 ```
-![Uploading x4.png…]()
+
+Output
+![x4](https://github.com/Rehant123/internsctl/assets/74208153/04163fb8-1ec1-46a1-8906-f792deb9067f)
 
 
 **2. Memory information**
@@ -126,6 +132,8 @@ function get_memory_info() {
 **Execution**: 
 ```
  ```
+Output
+![x6](https://github.com/Rehant123/internsctl/assets/74208153/15b7be98-64ea-4936-8003-313afb6fddd9)
 
  ### Part 2 Level Intermediate
 
@@ -180,9 +188,12 @@ esac
 
 ```
 ./internsctl.sh user create <username> ##new user
-![Uploading x7.png…]()
 
 ./internsctl.sh user list ##user list
+
+
  ./internsctl.sh user list --sudo-only ##user with sudo permission
 ```
-
+![Uploading x7.png…]()
+![Screenshot 2024-01-10 174534](https://github.com/Rehant123/internsctl/assets/74208153/c2d94324-542f-4685-8896-3460e60867be)
+![Screenshot 2024-01-10 174706](https://github.com/Rehant123/internsctl/assets/74208153/b9272adc-93ea-4c9b-a8f6-9f792f74b7d7)
