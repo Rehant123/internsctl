@@ -68,8 +68,12 @@ internsctl [OPTIONS]
 **Execution**: 
 ```
 man ./internsctl.sh
+
 ./internsctl.sh --help
 ```
+
+output
+
 -- **(version command)**
 ```
 function display_version() {
@@ -80,6 +84,7 @@ function display_version() {
 ```
  ./internsctl.sh --version
 ```
+![x3](https://github.com/Rehant123/internsctl/assets/74208153/48eae053-9b52-455a-8df4-59ef44bc5451)
 
 ## section B
 
@@ -97,6 +102,8 @@ function get_cpu_info() {
 ```
  ./internsctl.sh cpu getinfo
 ```
+![Uploading x4.png…]()
+
 
 **2. Memory information**
 
@@ -105,12 +112,13 @@ create a function getmemory info
 function get_memory_info() {
   free
 }
+![x6](https://github.com/Rehant123/internsctl/assets/74208153/5f46e443-7fc3-4208-a84a-bd02c1efcc5b)
+
 
 ```
 **Execution**: 
 ```
- ./internsctl.sh memory getinfo
-```
+ ```
 
  ### Part 2 Level Intermediate
 
@@ -165,6 +173,8 @@ esac
 
 ```
 ./internsctl.sh user create <username> ##new user
+![Uploading x7.png…]()
+
 ./internsctl.sh user list ##user list
  ./internsctl.sh user list --sudo-only ##user with sudo permission
 ```
